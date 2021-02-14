@@ -30,7 +30,7 @@
 <!-- AdminLTE App -->
 <script src="<?php echo base_url(); ?>assets/js/adminlte.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="<?php echo base_url(); ?>assets/js/dashboard.js"></script>
+<!-- <script src="<?php echo base_url(); ?>assets/js/dashboard.js"></script> -->
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url(); ?>assets/js/demo.js"></script>
 <script>
@@ -59,6 +59,9 @@
 				$('.btn[data-filter]').removeClass('active');
 				$(this).addClass('active');
 			});
+		})
+		$(function () {
+		  $('[data-toggle="tooltip"]').tooltip()
 		})
 	</script>
 <?php endif ?>
