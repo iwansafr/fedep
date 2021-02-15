@@ -18,4 +18,8 @@ class Pel extends CI_Controller
 	{
 		$this->load->view('index');
 	}
+	public function kondisi()
+	{
+		$this->load->view('index');
+	}
 }
