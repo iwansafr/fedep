@@ -171,44 +171,77 @@
 			<i class="fas fa-angle-left right"></i>
 		</p>
 	</a>
-	<ul class="nav nav-treeview">
-		<li class="nav-item">
-			<a href="<?php echo base_url("pel/kelembagaan") ?>" class="nav-link">
-				<i class="far fa-circle nav-icon"></i>
-				<p>Kelembagaan</p>
-			</a>
-		</li>
-		<li class="nav-item">
-			<a href="<?php echo base_url("pel/kondisi") ?>" class="nav-link">
-				<i class="far fa-circle nav-icon"></i>
-				<p>Kondisi</p>
-			</a>
-		</li>
-		<li class="nav-item">
-			<a href="<?php echo base_url("pel/rencana") ?>" class="nav-link">
-				<i class="far fa-circle nav-icon"></i>
-				<p>Rencana</p>
-			</a>
-		</li>
-		<li class="nav-item">
-			<a href="<?php echo base_url("pel/Pelaksanaan") ?>" class="nav-link">
-				<i class="far fa-circle nav-icon"></i>
-				<p>Pelaksanaan</p>
-			</a>
-		</li>
-		<li class="nav-item">
-			<a href="<?php echo base_url("pel/evaluasi") ?>" class="nav-link">
-				<i class="far fa-circle nav-icon"></i>
-				<p>Evaluasi</p>
-			</a>
-		</li>
-	</ul>
+	<?php if (is_admin() || is_root() || is_operator()): ?>
+		<ul class="nav nav-treeview">
+			<li class="nav-item">
+				<a href="<?php echo base_url("pel/kelembagaan_list") ?>" class="nav-link">
+					<i class="far fa-circle nav-icon"></i>
+					<p>Kelembagaan</p>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="<?php echo base_url("pel/kondisi_list") ?>" class="nav-link">
+					<i class="far fa-circle nav-icon"></i>
+					<p>Kondisi</p>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="<?php echo base_url("pel/rencana_list") ?>" class="nav-link">
+					<i class="far fa-circle nav-icon"></i>
+					<p>Rencana</p>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="<?php echo base_url("pel/Pelaksanaan_list") ?>" class="nav-link">
+					<i class="far fa-circle nav-icon"></i>
+					<p>Pelaksanaan</p>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="<?php echo base_url("pel/evaluasi_list") ?>" class="nav-link">
+					<i class="far fa-circle nav-icon"></i>
+					<p>Evaluasi</p>
+				</a>
+			</li>
+		</ul>
+	<?php endif ?>
 	<?php if (is_cluster()): ?>
+
 		<ul class="nav nav-treeview">
 			<li class="nav-item">
 				<a href="<?php echo base_url("kelembagaan/edit") ?>" class="nav-link">
 					<i class="far fa-circle nav-icon"></i>
 					<p>Profile</p>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="<?php echo base_url("pel/kelembagaan") ?>" class="nav-link">
+					<i class="far fa-circle nav-icon"></i>
+					<p>Kelembagaan</p>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="<?php echo base_url("pel/kondisi") ?>" class="nav-link">
+					<i class="far fa-circle nav-icon"></i>
+					<p>Kondisi</p>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="<?php echo base_url("pel/rencana") ?>" class="nav-link">
+					<i class="far fa-circle nav-icon"></i>
+					<p>Rencana</p>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="<?php echo base_url("pel/Pelaksanaan") ?>" class="nav-link">
+					<i class="far fa-circle nav-icon"></i>
+					<p>Pelaksanaan</p>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="<?php echo base_url("pel/evaluasi") ?>" class="nav-link">
+					<i class="far fa-circle nav-icon"></i>
+					<p>Evaluasi</p>
 				</a>
 			</li>
 		</ul>

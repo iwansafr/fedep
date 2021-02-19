@@ -8,7 +8,7 @@
 			<!-- /.card-header -->
 			<div class="card-body">
 				<p>
-					<?php echo $data['pesan']['pesan']; ?>
+					<?php echo !empty($data['pesan']['pesan']) ? $data['pesan']['pesan'] : 'Tidak Ada Pesan'; ?>
 				</p>
 			</div>
 		</div>

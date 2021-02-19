@@ -325,7 +325,7 @@ class User_model extends CI_model
 
 						}else{
 							$icek = $this->db->get_where('user_profile', ['user_id' => $id])->row_array();
-							if ($icek['img'] == null) {
+							if (@$icek['img'] == null) {
 								$image_name = 'admin.jpg';
 							}else{
 								$image_name = $icek['img'];
