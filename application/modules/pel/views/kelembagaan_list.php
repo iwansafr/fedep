@@ -36,6 +36,11 @@ if (is_admin() || is_operator()) {
 	$form->setLabel('dok_pembiayaan','Pembiayaan FEDEP');
 	$form->setCaption('dok_pembiayaan','Kerangka pembiayaan FEDEP untuk mengawal dialog, biaya perjalanan(dalam rangka koordinasi ke provinsi dan mitra FEDEP) (format gambar jpg dan png max 2mb)');
 
+	if(is_root() || is_admin())
+	{
+		$form->setDelete(true);
+	}
+
 	$form->form();
 }else{
 	msg('Anda tidak punya akses ke halaman ini','danger');

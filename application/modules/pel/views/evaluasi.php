@@ -17,32 +17,32 @@ if(is_cluster())
 	$form->setValue('user_id',$session['id']);
 
 	$form->addInput('keaktifan','file');
-	$form->setLabel('keaktifan','');
-	$form->setCaption('keaktifan','(foto) (format gambar jpg dan png max 2mb)');
+	$form->setLabel('keaktifan','Keaktifan');
+	$form->setCaption('keaktifan','Keaktifan anggota Pokja (foto) (format gambar jpg dan png max 2mb)');
 
 	$form->addInput('kesesuaian','file');
-	$form->setLabel('kesesuaian','');
-	$form->setCaption('kesesuaian', '(foto) (format gambar jpg dan png max 2mb)');
+	$form->setLabel('kesesuaian','Kesesuaian Program');
+	$form->setCaption('kesesuaian', 'Kesesuaian program dan kegiatan dengan rencana kegiatan (foto) (format gambar jpg dan png max 2mb)');
 
 	$form->addInput('sinkronisasi','file');
-	$form->setLabel('sinkronisasi','');
-	$form->setCaption('sinkronisasi', '(foto) (format gambar jpg dan png max 2mb)');
+	$form->setLabel('sinkronisasi','Sinkronisasi');
+	$form->setCaption('sinkronisasi', 'Sinkronisasi dengan kegiatan SKPD (foto) (format gambar jpg dan png max 2mb)');
 
 	$form->addInput('implementasi','file');
-	$form->setLabel('implementasi','');
-	$form->setCaption('implementasi', '(foto) (format gambar jpg dan png max 2mb)');
+	$form->setLabel('implementasi','Implementasi');
+	$form->setCaption('implementasi', 'Adanya implementasi rencana kegiatan(foto) (format gambar jpg dan png max 2mb)');
 
 	$form->addInput('finansial','file');
-	$form->setLabel('finansial','');
-	$form->setCaption('finansial', '(foto) (format gambar jpg dan png max 2mb)');
+	$form->setLabel('finansial','Finansial');
+	$form->setCaption('finansial', 'Adanya financial yang bersumber dari APBD/APBN dan non-APBD/APBN (foto) (format gambar jpg dan png max 2mb)');
 
 	$form->addInput('rekomendasi','file');
-	$form->setLabel('rekomendasi','');
-	$form->setCaption('rekomendasi', '(foto) (format gambar jpg dan png max 2mb)');
+	$form->setLabel('rekomendasi','Rekomendasi');
+	$form->setCaption('rekomendasi', 'Menghasilkan rekomendasi formulasi kebijakan yang ditindaklanjuti (foto) (format gambar jpg dan png max 2mb)');
 
 	$form->addInput('evaluasi','file');
-	$form->setLabel('evaluasi','');
-	$form->setCaption('evaluasi', '(foto) (format gambar jpg dan png max 2mb)');
+	$form->setLabel('evaluasi','Evaluasi');
+	$form->setCaption('evaluasi', 'Adanya evaluasi terhadap seluruh capaian kegiatan(foto) (format gambar jpg dan png max 2mb)');
 
 	$form->form();
 }else{
