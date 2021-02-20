@@ -192,7 +192,7 @@
 				</a>
 			</li>
 			<li class="nav-item">
-				<a href="<?php echo base_url("pel/Pelaksanaan_list") ?>" class="nav-link">
+				<a href="<?php echo base_url("pel/pelaksanaan_list") ?>" class="nav-link">
 					<i class="far fa-circle nav-icon"></i>
 					<p>Pelaksanaan</p>
 				</a>
@@ -233,7 +233,7 @@
 				</a>
 			</li>
 			<li class="nav-item">
-				<a href="<?php echo base_url("pel/Pelaksanaan") ?>" class="nav-link">
+				<a href="<?php echo base_url("pel/pelaksanaan") ?>" class="nav-link">
 					<i class="far fa-circle nav-icon"></i>
 					<p>Pelaksanaan</p>
 				</a>

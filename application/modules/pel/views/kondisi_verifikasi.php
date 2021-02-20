@@ -30,8 +30,8 @@ if(is_admin() || is_operator())
 		$form->setCaption('potensi','Peta Potensi PEL (format gambar jpg dan png max 2mb)');
 
 
-	$form->addInput('v_potensi','dropdown');
-	$form->setOptions('v_potensi',['Tidak Valid','Valid']);
+		$form->addInput('v_potensi','dropdown');
+		$form->setOptions('v_potensi',['Tidak Valid','Valid']);
 		$form->addInput('klasifikasi','thumbnail');
 		$form->setLabel('klasifikasi','Klasifikasi');
 		$form->setCaption('klasifikasi','Klasifikasi potensi PEL, yang meliputi keberadaan klaster unggulan (format gambar jpg dan png max 2mb)');
