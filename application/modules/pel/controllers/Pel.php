@@ -84,5 +84,10 @@ class Pel extends CI_Controller
 	{
 		$this->load->view('index');
 	}
+
+	public function grafik()
+	{
+		$this->load->view('index');
+	}
 	
 }
