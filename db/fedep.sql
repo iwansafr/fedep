@@ -28,7 +28,7 @@ CREATE TABLE `pel_evaluasi` (
   `v_evaluasi` tinyint(1) NOT NULL DEFAULT '0',
   `nilai` tinyint(1) NOT NULL DEFAULT '0',
   `layak` tinyint(1) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 DROP TABLE IF EXISTS `pel_kelembagaan`;
 CREATE TABLE `pel_kelembagaan` (
@@ -44,7 +44,7 @@ CREATE TABLE `pel_kelembagaan` (
   `v_dok_pembiayaan` tinyint(1) NOT NULL DEFAULT '0',
   `nilai` tinyint(1) NOT NULL DEFAULT '0',
   `layak` tinyint(1) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 DROP TABLE IF EXISTS `pel_kondisi`;
 CREATE TABLE `pel_kondisi` (
@@ -62,7 +62,7 @@ CREATE TABLE `pel_kondisi` (
   `v_inovasi` tinyint(1) NOT NULL DEFAULT '0',
   `nilai` tinyint(1) NOT NULL DEFAULT '0',
   `layak` tinyint(1) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 DROP TABLE IF EXISTS `pel_pelaksanaan`;
 CREATE TABLE `pel_pelaksanaan` (
@@ -80,7 +80,7 @@ CREATE TABLE `pel_pelaksanaan` (
   `v_pembiayaan` tinyint(1) NOT NULL DEFAULT '0',
   `nilai` tinyint(1) NOT NULL DEFAULT '0',
   `layak` tinyint(1) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 DROP TABLE IF EXISTS `pel_rencana`;
 CREATE TABLE `pel_rencana` (
@@ -96,7 +96,7 @@ CREATE TABLE `pel_rencana` (
   `v_tindakan` tinyint(1) NOT NULL DEFAULT '0',
   `nilai` tinyint(1) NOT NULL DEFAULT '0',
   `layak` tinyint(1) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
 ALTER TABLE `pel_evaluasi`
