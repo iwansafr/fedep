@@ -96,5 +96,10 @@ class Pel extends CI_Controller
 		$data = $this->pel_model->chart();
 		$this->load->view('index',['data'=>$data]);
 	}
+	public function chart_json()
+	{
+		$data = $this->pel_model->chart();
+		echo json_encode($data);
+	}
 
 }
