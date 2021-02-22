@@ -10,6 +10,7 @@ class Pel extends CI_Controller
 		$this->load->model('esg_model');
 		$this->load->library('Esg');
 		$this->load->library('ZEA/Zea');
+		$this->load->model('pel_model');
 		$this->session_data = $this->session->userdata(str_replace('/','_',base_url('_logged_in')));
 	}
 	public function index()
@@ -90,4 +91,10 @@ class Pel extends CI_Controller
 		$this->load->view('index');
 	}
 	
+	public function chart()
+	{
+		$data = $this->pel_model->chart();
+		$this->load->view('index',['data'=>$data]);
+	}
+
 }
