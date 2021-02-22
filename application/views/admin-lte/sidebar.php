@@ -203,6 +203,12 @@
 					<p>Evaluasi</p>
 				</a>
 			</li>
+			<li class="nav-item">
+				<a href="<?php echo base_url("pel/chart") ?>" class="nav-link">
+					<i class="far fa-circle nav-icon"></i>
+					<p>Grafik</p>
+				</a>
+			</li>
 		</ul>
 	<?php endif ?>
 	<?php if (is_cluster()): ?>
