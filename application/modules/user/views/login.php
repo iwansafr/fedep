@@ -33,7 +33,9 @@
     </nav> 
       <div style="height: auto; background-color: white;">
         <div style="margin: 5px">
-          <h6>Telephone :  | Fax :  | Email :  | Website : <a href=""></a> | Alamat :  </h6>
+          <?php $this->load->library('esg') ?>
+          <?php $data = $this->esg->get_config('fedep') ?>
+          <h6>Telephone : <?= @$data['phone'] ?> | Fax : <?= @$data['faximile'] ?> | Email : <?= @$data['email'] ?> | Website : <a href="<?php echo base_url(); ?>">fedep</a> | Alamat :  </h6>
         </div>
       </div>
   </div>
