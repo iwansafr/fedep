@@ -77,8 +77,8 @@ class Web extends CI_Controller
 
 	public function single_kontak($id=0)
 	{
-		$category = $this->web_model->berita_cat();
-		$this->load->view('index', ['berita_cat'=>$category]);
+		$this->load->library('esg');
+		$this->load->view('index', ['data'=>$this->esg->get_config('fedep')]);
 	}
 
 	public function galery($id=0)

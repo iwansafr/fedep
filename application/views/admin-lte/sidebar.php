@@ -71,6 +71,23 @@
   </a>
 </li>
 <?php if (is_admin() || is_operator()): ?>
+<li class="nav-item has-treeview">
+		<a href="#" class="nav-link">
+			<i class="nav-icon fas fa-cog"></i>
+			<p>
+				Contact
+				<i class="fas fa-angle-left right"></i>
+			</p>
+		</a>
+		<ul class="nav nav-treeview">
+			<li class="nav-item">
+				<a href="<?php echo base_url("config/fedep") ?>" class="nav-link">
+					<i class="far fa-circle nav-icon"></i>
+					<p>About Us</p>
+				</a>
+			</li>
+		</ul>
+	</li>
 	<li class="nav-item has-treeview">
 		<a href="#" class="nav-link">
 			<i class="nav-icon fas fa-user-cog"></i>

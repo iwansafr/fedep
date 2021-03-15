@@ -1,5 +1,4 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
-
 <div class="page-title lb single-wrapper">
     <div class="container">
         <div class="row">
@@ -24,16 +23,16 @@
                     <div class="row">
                         <div class="col-lg-5">
                             <h4>Fedep</h4>
-                            <p>-</p>
+                            <p>- <?= @$data['fedep'] ?> </p>
 
                             <h4>Telephone</h4>
-                            <p>-</p>
+                            <p>- <?= @$data['phone'] ?> </p>
 
                             <h4>Email</h4>
-                            <p>-</p>
+                            <p>- <?= @$data['email'] ?> </p>
 
                             <h4>Faksimile</h4>
-                            <p>-</p>
+                            <p>- <?= @$data['faximile'] ?> </p>
                         </div>
                     </div>
                 </div><!-- end page-wrapper -->
