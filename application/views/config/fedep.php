@@ -5,8 +5,7 @@ $form->init('param');
 $form->setTable('config');
 $form->setParamName('fedep');
 
-$form->addInput('fedep','text');
-$form->setType('fedep','number');
+$form->addInput('fedep','textarea');
 
 $form->addInput('phone','text');
 $form->setType('phone','number');
