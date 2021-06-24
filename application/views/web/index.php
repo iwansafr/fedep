@@ -117,14 +117,15 @@
                     </div><!-- end col -->
 
                     <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                        <?php $this->load->library('Esg') ?>
                         <?php $config = $this->esg->get_config('fedep');?>
                         <div class="widget">
                             <h2 class="widget-title">Kontak</h2>
                             <div class="link">
                                 <ul>
-                                    <li>phone : <?php echo $config['phone'] ?></li>
-                                    <li>email :<?php echo $config['email'] ?></li>
-                                    <li>faximile :<?php echo $config['faximile'] ?></li>
+                                    <li>phone : <?php echo @$config['phone'] ?></li>
+                                    <li>email :<?php echo @$config['email'] ?></li>
+                                    <li>faximile :<?php echo @$config['faximile'] ?></li>
                                 </ul>
                             </div><!-- end link-widget -->
                         </div><!-- end widget -->
