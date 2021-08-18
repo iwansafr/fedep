@@ -14,7 +14,10 @@ if(!empty($field))
 		}
 		$image    = !empty($data[$field]) ? $name.'/'.$data[$field] : '';
 	}
-	echo form_label(ucfirst($label), $label).' '.@$this->help[$field];
+	if (empty($this->accept[$field])) {
+		$this->accept[$field] = $this->accept_file;
+	}
+	echo form_label(ucfirst($label), $label).' Max Size ('.$this->max_size.' KB)'.' '.$this->accept[$field].' '.@$this->help[$field];
 	if(!empty($image))
 	{
 		?>
@@ -30,6 +33,11 @@ if(!empty($field))
 							break;
 						case 'image':
 							
+							break;
+						case 'document':
+							?>
+								<iframe src="<?php echo image_module($this->table, $image); ?>#toolbar=0&navpanes=0&scrollbar=0" frameborder="0" width="100%" height="500px;"></iframe>
+							<?php
 							break;
 						case 'audio':
 							?>
