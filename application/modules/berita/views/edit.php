@@ -37,7 +37,6 @@
 								<div class="form-group ">
 									<label for="category">Category</label>
 									<select name="cat_id" class="form-control select2" style="width: 100%;" required>
-										<option value="0">None</option>
 										<?php if (!empty($category)): ?>
 											<?php foreach ($category as $key => $value): ?>
 												<?php $selected = ''; ?>
