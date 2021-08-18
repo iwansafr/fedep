@@ -106,8 +106,8 @@
 											<input type="file" name="img[]" class="form-control custom-file-label" id="photo">
 										</div>
 									</div>
-									<label for="ket" >Keterangan</label>
-									<textarea id="ket" name="ket[]" class="form-control" rows="3" placeholder="keterangan"></textarea>
+									<!-- <label for="ket" >Keterangan</label>
+									<textarea id="ket" name="ket[]" class="form-control" rows="3" placeholder="keterangan"></textarea> -->
 								</div>
 							<?php endforeach ?>
 						</div>

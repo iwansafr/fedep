@@ -40,7 +40,7 @@ class Responses_model extends CI_model
 						'question_id'=>$dataq,
 						'isian'=>$isian[$index],
 						'ceklist'=>$ceklist[$index],
-						'ket'=>$ket[$index],
+						// 'ket'=>$ket[$index],
 						'img'=>str_replace(" ","_",$img[$index]),
 					));
 

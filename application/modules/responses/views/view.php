@@ -43,14 +43,14 @@
 							<?php endif ?>
 						</div>
 					<?php endif ?>
-					<div style="margin-top: -35px; padding-left: 22px" class="col-md-12 row">
+					<!-- <div style="margin-top: -35px; padding-left: 22px" class="col-md-12 row">
 						<p>keterangan :  </p>
 						<?php if (empty($value['ket'])): ?>
 							<p>Tanpa keterangan</p>
 						<?php else: ?>
 							<p><?php echo $value['ket']; ?></p>
 						<?php endif ?>
-					</div>
+					</div> -->
 
 				<?php endforeach ?>
 			</div>
