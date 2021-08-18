@@ -87,6 +87,16 @@ class Zea
 	var $param_field         = 'value';
 	var $before;
 
+	var $max_size = 512;
+	var $accept_file = '.jpg,.png';
+
+	public function set_max_size($max_size =0)
+	{
+		if(!empty($max_size))
+		{
+			$this->max_size = $max_size;
+		}
+	}
 	public function set_delete_jointable($status = true)
 	{
 		$this->delete_jointable = $status;
