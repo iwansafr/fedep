@@ -1,7 +1,7 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');?>
 
 <section class="section first-section">
-    <div class="container-fluid">
+    <div class="container">
         <div class="masonry-blog clearfix">
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
               <div class="carousel-inner">
