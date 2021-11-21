@@ -86,4 +86,13 @@ class Web extends CI_Controller
 		$data = $this->web_model->image_for();
 		$this->load->view('index', ['data'=>$data]);
 	}
+
+	public function umkm()
+	{
+		$data['data'] = $this->db->query('SELECT u.*,p.nama,p.img,p.no_tlp,p.alamat,p.nama_usaha FROM user AS u LEFT JOIN user_profile AS p 
+		ON(p.user_id=u.id) LEFT JOIN user_has_role AS r 
+		ON(r.user_id=u.id) WHERE r.user_role_id = ?'
+		,4)->result_array();
+		$this->load->view('index', $data);
+	}
 }
