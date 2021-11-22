@@ -102,6 +102,7 @@ class Web extends CI_Controller
 		$form->init('roll');
 		$form->setTable('user');
 		$form->join('user_profile', 'ON(user_profile.user_id=user.id)', 'user.id,user.username,user.email,user_profile.nama,user_profile.no_tlp, user.created,user_profile.img, user_profile.alamat,user_profile.nama_usaha','user_has_role','ON(user_has_role.user_id=user.id)');
+		$form->setWhere('user_role_id = 4');
 		$form->addInput('id','plaintext');
 		$form->addInput('username','plaintext');
 		$form->addInput('email','plaintext');
@@ -109,9 +110,15 @@ class Web extends CI_Controller
 		$form->addInput('no_tlp','plaintext');
 		$form->addInput('alamat','plaintext');
 		$form->addInput('nama_usaha','plaintext');
-		$form->limit = 2;
 		$data['data'] = $form->getData();
 
+		$this->load->view('index', $data);
+	}
+
+	public function umkm_detail($id)
+	{
+		$data = [];
+		$data['data'] = $this->db->query('SELECT user.id,user.username,user.email,user_profile.nama,user_profile.no_tlp, user.created,user_profile.img, user_profile.alamat,user_profile.nama_usaha FROM user INNER JOIN user_profile ON(user_profile.user_id = user.id) WHERE user.id = ? ', $id)->row_array();
 		$this->load->view('index', $data);
 	}
 }

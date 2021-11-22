@@ -12,35 +12,32 @@
 
                     <div class="blog-list clearfix">
                         <div class="row">
-                            <?php if (!empty($data['data'])) : ?>
-                                <?php foreach ($data['data'] as $key => $value) : ?>
-                                    <div class="col-md-3">
+                            <?php if (!empty($data)) : ?>
+                                    <div class="col-md-12">
                                         <div class="card card-default">
                                             <div class="card-body">
                                                 <div class="blog-meta big-meta col-md-12">
-                                                    <h4><a href="<?php echo base_url('web/umkm_detail/'.$value['id'].'/'.str_replace(' ','_',$value['nama'])); ?>" title="" target="_blank"><?php echo $value['nama'] ?></a></h4>
-                                                    <img src="<?php echo base_url('assets/images/user/'.str_replace(' ','_',$value['img']))?>" class="img img-responsive img-fluid" style="object-fit: contain; height: 250px; width: 100%;" alt="">
+                                                    <h4><a href="<?php echo base_url('web/umkm_detail/'.$data['id'].'/'.str_replace(' ','_',$data['nama'])); ?>" title="" target="_blank"><?php echo $data['nama'] ?></a></h4>
+                                                    <img src="<?php echo base_url('assets/images/user/'.str_replace(' ','_',$data['img']))?>" class="img img-responsive img-fluid" style="object-fit: contain; height: 250px; width: 100%;" alt="">
                                                     <p>
-                                                        <?php echo word_limiter($value['alamat'], 70); ?>
+                                                        <?php echo word_limiter($data['alamat'], 70); ?>
                                                     </p>
                                                     <small class="firstsmall">
                                                         <a class="bg-orange" href="#" title="">
                                                             umkm
                                                         </a>
                                                     </small>
-                                                    <small><a href="#" title=""><?php echo date("j F Y | g:i a", strtotime($value['created'])) ?></a></small></a></small>
+                                                    <small><a href="#" title=""><?php echo date("j F Y | g:i a", strtotime($data['created'])) ?></a></small></a></small>
                                                 </div><!-- end meta -->
                                             </div>
                                         </div>
                                     </div>
-                                <?php endforeach ?>
                             <?php endif ?>
                         </div>
                     </div><!-- end blog-list -->
                 </div><!-- end page-wrapper -->
 
                 <hr class="invis">
-                <?php echo $data['pagination'] ?>
 
             </div><!-- end col -->
         </div><!-- end row -->
