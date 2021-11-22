@@ -89,10 +89,29 @@ class Web extends CI_Controller
 
 	public function umkm()
 	{
-		$data['data'] = $this->db->query('SELECT u.*,p.nama,p.img,p.no_tlp,p.alamat,p.nama_usaha FROM user AS u LEFT JOIN user_profile AS p 
-		ON(p.user_id=u.id) LEFT JOIN user_has_role AS r 
-		ON(r.user_id=u.id) WHERE r.user_role_id = ?'
-		,4)->result_array();
+		// $data['data'] = $this->db->query('SELECT u.*,p.nama,p.img,p.no_tlp,p.alamat,p.nama_usaha FROM user AS u LEFT JOIN user_profile AS p 
+		// ON(p.user_id=u.id) LEFT JOIN user_has_role AS r 
+		// ON(r.user_id=u.id) WHERE r.user_role_id = ?'
+		// ,4)->result_array();
+		$this->load->model('Esg_model');
+		$this->load->library('Esg');
+		$this->load->library('ZEA/Zea');
+
+		$data = [];
+		$form = new Zea();
+		$form->init('roll');
+		$form->setTable('user');
+		$form->join('user_profile', 'ON(user_profile.user_id=user.id)', 'user.id,user.username,user.email,user_profile.nama,user_profile.no_tlp, user.created,user_profile.img, user_profile.alamat,user_profile.nama_usaha','user_has_role','ON(user_has_role.user_id=user.id)');
+		$form->addInput('id','plaintext');
+		$form->addInput('username','plaintext');
+		$form->addInput('email','plaintext');
+		$form->addInput('nama','plaintext');
+		$form->addInput('no_tlp','plaintext');
+		$form->addInput('alamat','plaintext');
+		$form->addInput('nama_usaha','plaintext');
+		$form->limit = 2;
+		$data['data'] = $form->getData();
+
 		$this->load->view('index', $data);
 	}
 }
