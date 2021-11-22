@@ -93,6 +93,9 @@
                                 <a class="nav-link" href="<?php echo base_url('web/umkm') ?>">UMKM</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" href="<?php echo base_url('web/daftar') ?>">Daftar</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="<?php echo base_url('login') ?>">Login</a>
                             </li>
                         </ul>

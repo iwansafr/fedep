@@ -121,4 +121,8 @@ class Web extends CI_Controller
 		$data['data'] = $this->db->query('SELECT user.id,user.username,user.email,user_profile.nama,user_profile.no_tlp, user.created,user_profile.img, user_profile.alamat,user_profile.nama_usaha FROM user INNER JOIN user_profile ON(user_profile.user_id = user.id) WHERE user.id = ? ', $id)->row_array();
 		$this->load->view('index', $data);
 	}
+	public function daftar()
+	{
+		$this->load->view('index');
+	}
 }
