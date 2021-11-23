@@ -11,10 +11,19 @@
                     </div><!-- end blog-top -->
 
                     <div class="blog-list clearfix">
-                        <div class="row">
-                            <?php 
-                            
-                            ?>
+                        <div class="card card-default">
+                            <div class="card-header">
+                                Form Pendaftaran UMKM
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="">Nama Usaha</label>
+                                    <input type="text" name="nama_usaha" class="form-control">
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-sm btn-primary">Daftar</button>
+                            </div>
                         </div>
                     </div><!-- end blog-list -->
                 </div><!-- end page-wrapper -->
