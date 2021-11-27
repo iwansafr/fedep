@@ -124,6 +124,11 @@ class Web extends CI_Controller
 	}
 	public function daftar()
 	{
-		$this->load->view('index');
+		$data = $this->input->post();
+		$msg = [];
+		if (!empty($data)) {
+			$msg = $this->web_model->add_umkm($data);
+		}
+		$this->load->view('index',['data'=>$msg]);
 	}
 }
